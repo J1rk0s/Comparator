@@ -1,4 +1,5 @@
-﻿while (true)
+﻿// Smyčka pro opakování
+while (true)
 {
     // První číslo
     Console.Write("Zadejte první číslo: ");
@@ -11,6 +12,7 @@
     // Vyvolání metody Comparator
     Comparator(c1, c2);
 
+    // Pokračování
     Console.WriteLine("Pro pokračování stiskněte y");
     string y = Console.ReadLine();
     if (y == "y")
@@ -36,6 +38,12 @@ void Comparator(int a, int b)
     else if (a < b)
     {
         Console.WriteLine($"Číslo {a} je menší než {b}");
+        Console.ReadKey();
+        Console.Clear();
+    }
+    else if (a == b)
+    {
+        Console.WriteLine($"Číslo {a} je stejné jako {b}");
         Console.ReadKey();
         Console.Clear();
     }
